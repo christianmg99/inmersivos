@@ -10,10 +10,10 @@ public class Controlador : MonoBehaviour
     private float tiempoAct;
     private bool enCarrera = false;
 
-    void Start()
+    /*void Start()
     {
         activarTemporizador();
-    }
+    }*/
 
     // Update is called once per frame
     void Update()
@@ -23,7 +23,7 @@ public class Controlador : MonoBehaviour
         }
     }
 
-    private void cambiarContador(){
+    public void cambiarContador(){
         tiempoAct -= Time.deltaTime;
 
         if(tiempoAct > 0){
@@ -36,17 +36,17 @@ public class Controlador : MonoBehaviour
         }
     }
 
-    private void cambiarTemporizador(bool estado){
+    public void cambiarTemporizador(bool estado){
         enCarrera = estado;
     }
 
-    private void activarTemporizador(){
+    public void activarTemporizador(){
         tiempoAct = tiempoMax;
         slider.maxValue = tiempoMax;
         cambiarTemporizador(true);
     }
 
-    private void desactivarTemporizador(){
+    public void desactivarTemporizador(){
         cambiarTemporizador(false);
     }
 

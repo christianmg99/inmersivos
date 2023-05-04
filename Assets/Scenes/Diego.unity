@@ -265,7 +265,7 @@ RectTransform:
   - {fileID: 2029880081}
   - {fileID: 689657811}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -303,6 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6662db739755b874f90222e4ca1b5791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controlador: {fileID: 477280092}
 --- !u!20 &97270381 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 4636384281691455151, guid: 9f3d9ddf6ade643e88c0d05f2e56d438, type: 3}
@@ -355,7 +356,7 @@ Transform:
   m_Children:
   - {fileID: 1564410637}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &170568673
 GameObject:
@@ -1387,7 +1388,7 @@ GameObject:
   - component: {fileID: 477280093}
   - component: {fileID: 477280092}
   m_Layer: 0
-  m_Name: Controller
+  m_Name: Controlador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1477,7 +1478,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &523875214
 GameObject:
@@ -1544,7 +1545,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &523875218
 MonoBehaviour:
@@ -1582,7 +1583,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3202643572831470794, guid: abc805df2245a814aacfab1c9341525e, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3202643572831470794, guid: abc805df2245a814aacfab1c9341525e, type: 3}
       propertyPath: m_LocalScale.x
@@ -2112,7 +2113,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &826184167
 GameObject:
@@ -2952,7 +2953,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1163559673
 MonoBehaviour:
