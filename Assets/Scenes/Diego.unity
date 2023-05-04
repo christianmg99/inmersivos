@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 75708834}
   - component: {fileID: 75708833}
   - component: {fileID: 75708839}
+  - component: {fileID: 75708840}
   m_Layer: 5
   m_Name: CanvasJuego1
   m_TagString: Untagged
@@ -290,6 +291,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+--- !u!114 &75708840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75708832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6662db739755b874f90222e4ca1b5791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &97270381 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 4636384281691455151, guid: 9f3d9ddf6ade643e88c0d05f2e56d438, type: 3}
@@ -1711,7 +1724,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 570150240}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 75708840}
+        m_TargetAssemblyTypeName: CanvasJuego1Manager, Assembly-CSharp
+        m_MethodName: hideCanvas
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &570150240
 MonoBehaviour:
   m_ObjectHideFlags: 0
