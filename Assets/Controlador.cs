@@ -11,9 +11,11 @@ public class Controlador : MonoBehaviour
     private float tiempoAct;
     private bool enPartida;
 
-    // Variable para objetivos de recogida de basura
+    // Variables para objetivos de recogida de basura
     private int objetivosAct;
     [SerializeField] private int objetivosMax;
+
+    // Captar objeto texto del contador de objetivos
     [SerializeField] public GameObject contadorObjetivos;
 
     [SerializeField] private CanvasTemporizadorManager canvasTemporizadorManager;
@@ -21,6 +23,7 @@ public class Controlador : MonoBehaviour
     void Start(){
         objetivosAct = 0;
         enPartida = false;
+        // Set del texto del contador
         contadorObjetivos.GetComponent<TMPro.TextMeshProUGUI>().text = objetivosAct.ToString() + " de " + objetivosMax.ToString();
     }
 

@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class CanvasJuego1Manager : MonoBehaviour
 {
-
     [SerializeField] private Controlador controlador;
-
+    
     public void showCanvas(){
         gameObject.SetActive(true);
     }
