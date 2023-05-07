@@ -145,7 +145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &75708833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6662db739755b874f90222e4ca1b5791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlador: {fileID: 0}
+  controlador: {fileID: 477280092}
 --- !u!20 &97270381 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 4636384281691455151, guid: 9f3d9ddf6ade643e88c0d05f2e56d438, type: 3}
@@ -1406,11 +1406,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5899ddab92c22c47845ffacae4bc41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoMax: 100
+  tiempoMax: 10
   slider: {fileID: 255200468}
   objetivosMax: 5
   contadorObjetivos: {fileID: 819803493}
   canvasTemporizadorManager: {fileID: 1600841090}
+  canvasJuego2Manager: {fileID: 1582909519}
 --- !u!4 &477280093
 Transform:
   m_ObjectHideFlags: 0
@@ -2264,7 +2265,7 @@ GameObject:
   - component: {fileID: 775532338}
   - component: {fileID: 775532337}
   m_Layer: 5
-  m_Name: DescripcionJuego1
+  m_Name: DescripcionJuego2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4517,7 +4518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1582909519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4530,13 +4531,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ebf5968d5a51794f994109805344170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteArray1:
-  - {fileID: 21300000, guid: 3e573b4af775fea4396fb79131d88da5, type: 3}
-  spriteArray2:
-  - {fileID: 21300000, guid: 3e573b4af775fea4396fb79131d88da5, type: 3}
-  spriteArray3:
-  - {fileID: 21300000, guid: 766bff5447c1b9440a01f41e50ad61e1, type: 3}
+  spriteArray1: {fileID: 0}
+  spriteArray2: {fileID: 0}
+  spriteArray3: {fileID: 0}
   imagenObj: {fileID: 1107277110}
+  textoObjetivosEncontrados: {fileID: 1741747864}
 --- !u!114 &1582909520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4805,7 +4804,7 @@ GameObject:
   - component: {fileID: 1741747867}
   - component: {fileID: 1741747866}
   m_Layer: 5
-  m_Name: ObjetivosEncontrados
+  m_Name: TextoObjetivosEncontrados
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

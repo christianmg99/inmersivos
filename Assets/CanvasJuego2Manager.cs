@@ -1,33 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CanvasJuego2Manager : MonoBehaviour
 {
-    // Variables para el cambio de imagen
-    [SerializeField] public Sprite[] spriteArray1;
-    [SerializeField] public Sprite[] spriteArray2;
-    [SerializeField] public Sprite[] spriteArray3;
-
-	int current = 0;
-	SpriteRenderer spriteRenderer;
+	Image image;
 
     // Captar objeto de imagen
     [SerializeField] public GameObject imagenObj;
 
-    void Start()
-	{
-        // Captar renderer de la imagen
-    	spriteRenderer = imagenObj.GetComponent<SpriteRenderer>();
-        ChangeSprite(1);
-	}
+    // Captar objeto del texto de los resultados
+    [SerializeField] public GameObject textoObjetivosEncontrados;
 
-    public void showCanvas(int mode){
+    // Muestra el canvas y ajusta el texto e imagen a mostrar en él.
+    public void showCanvas(int objetivosEncontrados){
         gameObject.SetActive(true);
+        // Definir texto de resultados
+        textoObjetivosEncontrados.GetComponent<TMPro.TextMeshProUGUI>().text = "Has recogido " + objetivosEncontrados + " de los 5 objetivos";
+        // Captar renderer de la imagen
+    	image = imagenObj.GetComponent<Image>();
         // Cambiar la imagen en funcion de los resultados del juego
-        ChangeSprite(mode);
+        ChangeSprite(objetivosEncontrados);
     }
 
+    // Esconde el canvas
     public void hideCanvas(){
         gameObject.SetActive(false);
     }
@@ -41,14 +38,26 @@ public class CanvasJuego2Manager : MonoBehaviour
     }
  
     // Cambia la imagen
-    public void ChangeSprite(int mode)
+    public void ChangeSprite(int objetivosEncontrados)
 	{
-    	current++;
-    	if (current == spriteArray1.Length)
-    	{
-        	current = 0;
-    	}
-    	spriteRenderer.sprite = spriteArray1[current];
+        // Si no se ha encontrado ningún objetivo
+    	if(objetivosEncontrados <= 0){
+            // Imagen petardo
+            image.sprite = Resources.Load<Sprite>("Sprites/Cracker");
+            Debug.Log("Has encontrado 0 objetivos, aquí tienes un petardo");
+        } else{
+            // Si se han encontrado todos
+            if(objetivosEncontrados >= 5){
+                // Imagen cohete x1
+                image.sprite = Resources.Load<Sprite>("Sprites/cohetex3");
+                Debug.Log("Has encontrado los 5 objetivos, aquí tienes 3 cohetes");
+            } else{
+                // Si se han recogido alguno pero no todos
+                // Imagen cohete x3
+                image.sprite = Resources.Load<Sprite>("Sprites/cohetex1");
+                Debug.Log("Has encontrado algunos objetivos, aquí tienes un cohete");
+            }
+        }
 	}
 
 }

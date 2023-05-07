@@ -18,10 +18,14 @@ public class Controlador : MonoBehaviour
     // Captar objeto texto del contador de objetivos
     [SerializeField] public GameObject contadorObjetivos;
 
+    // Captar objeto texto del temporizador
     [SerializeField] private CanvasTemporizadorManager canvasTemporizadorManager;
 
+    // Captar objeto texto del canvas de resultados
+    [SerializeField] private CanvasJuego2Manager canvasJuego2Manager;
+
     void Start(){
-        objetivosAct = 0;
+        objetivosAct = 3;
         enPartida = false;
         // Set del texto del contador
         contadorObjetivos.GetComponent<TMPro.TextMeshProUGUI>().text = objetivosAct.ToString() + " de " + objetivosMax.ToString();
@@ -81,11 +85,15 @@ public class Controlador : MonoBehaviour
         cambiarTemporizador(false);
         // Se esconde el temporizador
         canvasTemporizadorManager.hideTemporizador();
+        //Mostrar resultados
+        canvasJuego2Manager.showCanvas(objetivosAct);
     }
 
-    // Suma uno en el contador de objetos encontrados y actualiza el 
+    // Suma uno en el contador de objetos encontrados y actualiza el texto
     public void objetivoEncontrado(){
+        // Suma 1
         objetivosAct++;
+        //Cambia el texto
         contadorObjetivos.GetComponent<TMPro.TextMeshProUGUI>().text = objetivosAct.ToString() + " de " + objetivosMax.ToString();
     }
 
