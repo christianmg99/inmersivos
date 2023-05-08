@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class ResiduosRecoger : MonoBehaviour
 {
+    // Capta el objeto controlador
+    [SerializeField] private Controlador controlador;
+
     public void Tocar(){
         //Game object will turn off
+        controlador.objetivoEncontrado();
         Destroy(gameObject);
         // Destroy(GetComponent<Rigidbody>(), 5);
     }

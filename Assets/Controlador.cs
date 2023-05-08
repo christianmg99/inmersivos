@@ -25,7 +25,7 @@ public class Controlador : MonoBehaviour
     [SerializeField] private CanvasJuego2Manager canvasJuego2Manager;
 
     void Start(){
-        objetivosAct = 3;
+        objetivosAct = 0;
         enPartida = false;
         // Set del texto del contador
         contadorObjetivos.GetComponent<TMPro.TextMeshProUGUI>().text = objetivosAct.ToString() + " de " + objetivosMax.ToString();
