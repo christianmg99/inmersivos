@@ -9,18 +9,29 @@ public class Rocket3 : MonoBehaviour
     public ConstantForce cf;
     public Transform IsKinematic;
 
-    IEnumerator Start()
-
-    {
+    // Muestra imagen del rocket 3
+    public void showRocket3(){
+        gameObject.SetActive(true);
         //Wait for 3 secs.
-        yield return new WaitForSeconds(2);
+        //yield return new WaitForSeconds(2);
 
         //Game object will turn off
-        GameObject.Find("MeshRenderer3").SetActive(false);
+        //hideRocket3();
 
-        rig.isKinematic = true;
-        cf.enabled = false;
+        //rig.isKinematic = true;
+        //cf.enabled = false;
+    }
 
+    // Esconde imagen del rocket 3
+    public void hideRocket3(){
+        gameObject.SetActive(false);
+    }
 
+    public void toggleCanvas(){
+        if(gameObject.activeSelf == true){
+            gameObject.SetActive(false);
+        } else{
+            gameObject.SetActive(true);
+        }
     }
 }
