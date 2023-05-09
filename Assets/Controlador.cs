@@ -26,9 +26,7 @@ public class Controlador : MonoBehaviour
 
     // Captar gameobjects de los petardos
     [SerializeField] private Firecracker1 firecracker1;
-    [SerializeField] private Rocket1 rocket1;
-    [SerializeField] private Rocket2 rocket2;
-    [SerializeField] private Rocket3 rocket3;
+    [SerializeField] private CoheteLanzar cohete1;
 
     void Start(){
         objetivosAct = 0;
@@ -116,15 +114,14 @@ public class Controlador : MonoBehaviour
         } else{
             // Si has conseguido todos los objetivos
             if(objetivosAct >= objetivosMax){
-                // Se muestran 3 cohetes
-                rocket1.showRocket1();
-                rocket2.showRocket2();
-                rocket3.showRocket3();
-                Debug.Log("Tres cohetes");
+                // Se muestran 1 cohete y 1 petardo
+                cohete1.showFirecracker();
+                firecracker1.showFirecracker();
+                Debug.Log("Cohete y Petardo");
             } else{
                 // Si se han encontrado algunos objetivos
                 // Se muestra 1 cohete
-                rocket1.showRocket1();
+                cohete1.showFirecracker();
                 Debug.Log("Un cohete");
             }
         }

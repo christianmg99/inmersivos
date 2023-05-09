@@ -17,7 +17,7 @@ public class CanvasJuego2Manager : MonoBehaviour
     public void showCanvas(int objetivosEncontrados){
         gameObject.SetActive(true);
         // Definir texto de resultados
-        textoObjetivosEncontrados.GetComponent<TMPro.TextMeshProUGUI>().text = "Has recogido " + objetivosEncontrados + " de los 5 objetivos";
+        textoObjetivosEncontrados.GetComponent<TMPro.TextMeshProUGUI>().text = "Has recogido " + objetivosEncontrados + " de los 6 objetivos";
         // Captar renderer de la imagen
     	image = imagenObj.GetComponent<Image>();
         // Cambiar la imagen en funcion de los resultados del juego
@@ -47,7 +47,7 @@ public class CanvasJuego2Manager : MonoBehaviour
             Debug.Log("Has encontrado 0 objetivos, aquí tienes un petardo");
         } else{
             // Si se han encontrado todos
-            if(objetivosEncontrados >= 5){
+            if(objetivosEncontrados >= 6){
                 // Imagen cohete x1
                 image.sprite = Resources.Load<Sprite>("Sprites/cohetex3");
                 Debug.Log("Has encontrado los 5 objetivos, aquí tienes 3 cohetes");

@@ -1753,6 +1753,10 @@ MonoBehaviour:
   contadorObjetivos: {fileID: 683082952}
   canvasTemporizadorManager: {fileID: 32048638}
   canvasJuego2Manager: {fileID: 1022796406}
+  firecracker1: {fileID: 0}
+  rocket1: {fileID: 0}
+  rocket2: {fileID: 0}
+  rocket3: {fileID: 0}
 --- !u!4 &247586939
 Transform:
   m_ObjectHideFlags: 0
@@ -8576,6 +8580,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7520683642920951810, guid: 6225c70e834069a42a917f8f8bd8e36c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7595984499909741962, guid: 6225c70e834069a42a917f8f8bd8e36c, type: 3}
       propertyPath: m_RootOrder
       value: 9
