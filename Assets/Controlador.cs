@@ -24,6 +24,12 @@ public class Controlador : MonoBehaviour
     // Captar objeto texto del canvas de resultados
     [SerializeField] private CanvasJuego2Manager canvasJuego2Manager;
 
+    // Captar gameobjects de los petardos
+    [SerializeField] private Firecracker1 firecracker1;
+    [SerializeField] private Rocket1 rocket1;
+    [SerializeField] private Rocket2 rocket2;
+    [SerializeField] private Rocket3 rocket3;
+
     void Start(){
         objetivosAct = 0;
         enPartida = false;
@@ -37,7 +43,7 @@ public class Controlador : MonoBehaviour
         // Si se está en partida
         if(enPartida){
             //Si se han recogido los objetivos
-            if(objetivosAct == 5){
+            if(objetivosAct == objetivosMax){
                 // Fin temporizador
                 desactivarTemporizador();
                 Debug.Log("Has encontrado todos los objetivos");
@@ -93,8 +99,35 @@ public class Controlador : MonoBehaviour
     public void objetivoEncontrado(){
         // Suma 1
         objetivosAct++;
-        //Cambia el texto
+        // Cambia el texto
         contadorObjetivos.GetComponent<TMPro.TextMeshProUGUI>().text = objetivosAct.ToString() + " de " + objetivosMax.ToString();
+    }
+
+    // Funcion que será invocada cuando se quieran mostrar los petardos que lanzará el jugador y oculta la interfaz
+    public void mostrarPetardos(){
+        // Oculta la interaz
+        canvasJuego2Manager.hideCanvas();
+
+        // Si has conseguido 0 objetivos
+        if(objetivosAct <= 0){
+            // Se muestra un petardo
+            firecracker1.showFirecracker();
+            Debug.Log("Un petardo");
+        } else{
+            // Si has conseguido todos los objetivos
+            if(objetivosAct >= objetivosMax){
+                // Se muestran 3 cohetes
+                rocket1.showRocket1();
+                rocket2.showRocket2();
+                rocket3.showRocket3();
+                Debug.Log("Tres cohetes");
+            } else{
+                // Si se han encontrado algunos objetivos
+                // Se muestra 1 cohete
+                rocket1.showRocket1();
+                Debug.Log("Un cohete");
+            }
+        }
     }
 
 }
