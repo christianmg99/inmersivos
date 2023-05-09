@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rocket1 : MonoBehaviour {
+public class Rocket1 : MonoBehaviour
+{
 
     public Rigidbody rig;
     public ConstantForce cf;
