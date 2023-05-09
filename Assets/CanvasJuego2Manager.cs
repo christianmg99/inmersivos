@@ -49,8 +49,8 @@ public class CanvasJuego2Manager : MonoBehaviour
             // Si se han encontrado todos
             if(objetivosEncontrados >= 6){
                 // Imagen cohete x1
-                image.sprite = Resources.Load<Sprite>("Sprites/cohetex3");
-                Debug.Log("Has encontrado los 5 objetivos, aquí tienes 3 cohetes");
+                image.sprite = Resources.Load<Sprite>("Sprites/petardoycohete");
+                Debug.Log("Has encontrado los 5 objetivos, aquí tienes un petardo y cohete");
             } else{
                 // Si se han recogido alguno pero no todos
                 // Imagen cohete x3

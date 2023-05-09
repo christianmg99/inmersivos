@@ -117,7 +117,7 @@ public class Controlador : MonoBehaviour
                 // Se muestran 1 cohete y 1 petardo
                 cohete1.showFirecracker();
                 firecracker1.showFirecracker();
-                Debug.Log("Cohete y Petardo");
+                Debug.Log("Cohete y petardo");
             } else{
                 // Si se han encontrado algunos objetivos
                 // Se muestra 1 cohete
