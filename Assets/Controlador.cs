@@ -25,7 +25,7 @@ public class Controlador : MonoBehaviour
     [SerializeField] private CanvasJuego2Manager canvasJuego2Manager;
 
     // Captar gameobjects de los petardos
-    [SerializeField] private Firecracker1 firecracker1;
+    [SerializeField] private PetardoEncender petardo1;
     [SerializeField] private CoheteLanzar cohete1;
 
     void Start(){
@@ -109,14 +109,14 @@ public class Controlador : MonoBehaviour
         // Si has conseguido 0 objetivos
         if(objetivosAct <= 0){
             // Se muestra un petardo
-            firecracker1.showFirecracker();
+            petardo1.showFirecracker();
             Debug.Log("Un petardo");
         } else{
             // Si has conseguido todos los objetivos
             if(objetivosAct >= objetivosMax){
                 // Se muestran 1 cohete y 1 petardo
                 cohete1.showFirecracker();
-                firecracker1.showFirecracker();
+                petardo1.showFirecracker();
                 Debug.Log("Cohete y petardo");
             } else{
                 // Si se han encontrado algunos objetivos
