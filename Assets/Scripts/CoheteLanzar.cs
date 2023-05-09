@@ -59,4 +59,17 @@ public class CoheteLanzar : MonoBehaviour
 
         ignicion_iniciada = true;
     }
+
+    // Muestra el modelo
+    public void showFirecracker(){
+        gameObject.SetActive(true);
+    }
+
+    public void toggleCanvas(){
+        if(gameObject.activeSelf == true){
+            gameObject.SetActive(false);
+        } else{
+            gameObject.SetActive(true);
+        }
+    }
 }
