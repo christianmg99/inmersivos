@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rocket1 : MonoBehaviour {
+public class Rocket1 : MonoBehaviour
+{
 
     public Rigidbody rig;
     public ConstantForce cf;
     public Transform IsKinematic;
 
-    void Start()
+    IEnumerator Start()
 
     {
-        /*
         //Wait for 3 secs.
         yield return new WaitForSeconds(3);
 
@@ -20,6 +20,7 @@ public class Rocket1 : MonoBehaviour {
 
         rig.isKinematic = true;
         cf.enabled = false;
-        */
+
+
     }
 }
