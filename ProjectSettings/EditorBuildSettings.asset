@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Christian.unity
+    guid: 9f5efd1874f35ce4abb61e8e0dc2501a
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 065ed37afbe8b6743aa283c6b841295b, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9c079f7a1cb192e47a1b93d9b1921132, type: 2}
